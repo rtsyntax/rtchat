@@ -1,0 +1,56 @@
+body {
+  background-color: #CCC;
+  font-family: sans-serif;
+}
+
+.main {
+  background-color: #FFF;
+  max-width: 800px;
+  margin: 12px auto;
+}
+
+.topbar {
+  background-color: #78E;
+  padding: 12px;
+}
+
+.topbar-title {
+  color: #EEE;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.topbar-auth {
+  float: right;
+  line-height: 24px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.messages {
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 4px solid #777;
+}
+
+.message {
+  line-height: 20px;
+}
+
+.message-sender {
+  font-weight: bold;
+}
+
+#chat-message-input,
+#room-name-input {
+  width: 88%;
+  margin-top: 8px;
+}
+
+#chat-message-submit,
+#room-name-submit {
+  width: 10%;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "reset.css" %}">
+    <link rel="stylesheet" href="{% static "layout.css" %}">
+  </head>
+  <body>
+    <div class="main">
+      <div class="topbar">
+        <span class="topbar-title">{% block topbar_title %}{% endblock %}</span>
+        <span class="topbar-auth">
+          {% if user.is_authenticated %}
+            {{ user }} | <a href="{% url "account:logout" %}">logout</a>
+          {% else %}
+            <a href="{% url "account:login" %}">login</a> | <a href="{% url "account:signup" %}">signup</a>
+          {% endif %}
+        </span>
+      </div>
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
